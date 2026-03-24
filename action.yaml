@@ -91,7 +91,7 @@ runs:
       run: |
         echo "Azure client-id, tenant-id, subscription-id are required."
         exit 1
-    - uses: azure/login@v1
+    - uses: azure/login@v3
       if: ${{ inputs.cloud-provider == 'Azure' }}
       with:
         client-id: ${{ inputs.azure-client-id }}
