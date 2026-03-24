@@ -116,7 +116,7 @@ runs:
       run: |
         echo "Azure AKS resource group, cluster name are required."
         exit 1
-    - uses: azure/aks-set-context@v3
+    - uses: azure/aks-set-context@v5
       if: ${{ inputs.cloud-provider == 'Azure' }}
       with:
         resource-group: ${{ inputs.azure-aks-resource-group }}
