@@ -105,7 +105,7 @@ runs:
         exit 1
     - name: Login to ACR Registry
       if: ${{ inputs.cloud-provider == 'Azure' }}
-      uses: azure/docker-login@v1
+      uses: azure/docker-login@v2
       with:
         login-server: ${{ inputs.acr-login-registry }}
         username: ${{ inputs.acr-username }}
